@@ -1,0 +1,47 @@
+La taxonomía de Flynn es la clasificación
+de las arquitecturas de las computadoras 
+Esta clasificacion se define por el número
+de instrucciones concurrentes y los flujos
+de datos disponibles en la aequitectura.
+
+-SISD(Simple Insertion Simple Data):
+Computador secuencial, no explota el
+paralelismo en las instrucciones o flujo 
+de datos, ejecuta una única instrucción 
+y un dato en cada ciclo, un único
+procesador.
+
+-SIMD(Simple Insertion Multiple Data):
+Todas las unidades ejecutan una misma 
+instrucción de manera sincronizada pero
+con datos distintos, explota varios flujos
+de datos con un único flujo de instrucción.
+
+-MISD(Multiple Insertion Simple Data):
+Multiples flujos de instrucciones unico 
+flujo de datos, paralelismo redundante.
+
+-MIMD(Multiple Insertion Multiple Data):
+Varios procesadores autónomos que ejecutan
+simultaneamente intruccion diferentes.
+--------------------------------------------
+OPENMP:
+Debido al manejo de la directiva "Pragma" 
+y el trabajo de los hilos del procesador
+solo ejecutan un codigo o instruccion.
+Y tener que usar uns subdirectiva "For" 
+para tratar de simular el trabajo
+independiente de cada hilo como en MIMD. 
+Su clasificacion es SIMD y MIMD.
+
+MPI:
+Debido al mismo manejo independiente
+de cada hilo, asignando una instrucción
+diferente o incluso si desea similar.
+Su clasificacion es MIMD y SIMD.	
+
+MULTIPROCESSING: 
+El uso de la libreria "multiprocessing"
+y la funcion "Pool()" es bastante similar 
+a OpenMp respecto al manejo de hilos,
+Su clasificación es SIMD.
